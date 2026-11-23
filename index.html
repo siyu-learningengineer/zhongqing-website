@@ -149,6 +149,10 @@ h2.title{font-size:clamp(32px,4.6vw,64px);font-weight:500;line-height:1.15;lette
   display:flex;align-items:center;gap:64px}
 .marquee-track span::after{content:"✦";color:var(--gold);font-size:10px}
 @keyframes scroll{to{transform:translateX(-50%)}}
+.marquee-track{align-items:center;gap:72px}
+.brand{display:block;flex:none;height:32px;width:calc(var(--w)*1px);opacity:.6;transition:opacity .3s;
+  background:url('images/brands.webp') 0 calc(var(--i)*-32px)/128px auto no-repeat}
+.brand:hover{opacity:1}
 
 /* ---------- 应用场景：滚动驱动手风琴 ---------- */
 .scenes{position:relative}
@@ -362,14 +366,10 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);
 <!-- ======================= 2. 品牌跑马灯 ======================= -->
 <div class="marquee" id="brands" aria-label="代理品牌">
   <div class="marquee-track">
-    <!-- 替换：可把文字换成品牌 logo 图片 <span><img src="images/brands/xx.svg" height="28" alt="品牌名"></span> -->
-    <span>L-ACOUSTICS</span><span>d&amp;b audiotechnik</span><span>BOSE</span><span>EAW</span><span>Electro-Voice</span>
-    <span>MIDAS</span><span>DiGiCo</span><span>SENNHEISER</span><span>SHURE</span><span>Symetrix</span>
-    <span>ALLEN&amp;HEATH</span><span>Soundcraft</span><span>AUDIX</span><span>LAB.GRUPPEN</span><span>Absen</span><span>利亚德</span><span>BOE</span>
+    <!-- 品牌 logo 来自 images/brands.webp（白色剪影合图）；--i 是第几个，--w 是显示宽度 -->
+    <i class="brand" role="img" aria-label="BOSE" style="--i:0;--w:128"></i><i class="brand" role="img" aria-label="ALLEN&amp;HEATH" style="--i:1;--w:128"></i><i class="brand" role="img" aria-label="EAW" style="--i:2;--w:128"></i><i class="brand" role="img" aria-label="Kling&amp;Freitag" style="--i:3;--w:128"></i><i class="brand" role="img" aria-label="Symetrix" style="--i:4;--w:128"></i><i class="brand" role="img" aria-label="Powersoft" style="--i:5;--w:114"></i><i class="brand" role="img" aria-label="SHURE" style="--i:6;--w:128"></i><i class="brand" role="img" aria-label="televic" style="--i:7;--w:128"></i><i class="brand" role="img" aria-label="SENNHEISER" style="--i:8;--w:128"></i><i class="brand" role="img" aria-label="TANNOY" style="--i:9;--w:128"></i><i class="brand" role="img" aria-label="LAB.GRUPPEN" style="--i:10;--w:128"></i><i class="brand" role="img" aria-label="MIDAS" style="--i:11;--w:128"></i><i class="brand" role="img" aria-label="Electro-Voice" style="--i:12;--w:128"></i><i class="brand" role="img" aria-label="Martin Audio" style="--i:13;--w:30"></i><i class="brand" role="img" aria-label="TW AUDiO" style="--i:14;--w:128"></i><i class="brand" role="img" aria-label="珠江灯光" style="--i:15;--w:119"></i><i class="brand" role="img" aria-label="JOLLY 鸿彩灯光" style="--i:16;--w:72"></i><i class="brand" role="img" aria-label="FINE ART" style="--i:17;--w:128"></i><i class="brand" role="img" aria-label="AVOLITES" style="--i:18;--w:58"></i><i class="brand" role="img" aria-label="BOSCH" style="--i:19;--w:128"></i><i class="brand" role="img" aria-label="Turbosound" style="--i:20;--w:128"></i>
     <!-- 第二组重复，保证无缝滚动 -->
-    <span>L-ACOUSTICS</span><span>d&amp;b audiotechnik</span><span>BOSE</span><span>EAW</span><span>Electro-Voice</span>
-    <span>MIDAS</span><span>DiGiCo</span><span>SENNHEISER</span><span>SHURE</span><span>Symetrix</span>
-    <span>ALLEN&amp;HEATH</span><span>Soundcraft</span><span>AUDIX</span><span>LAB.GRUPPEN</span><span>Absen</span><span>利亚德</span><span>BOE</span>
+    <i class="brand" aria-hidden="true" data-l="BOSE" style="--i:0;--w:128"></i><i class="brand" aria-hidden="true" data-l="ALLEN&amp;HEATH" style="--i:1;--w:128"></i><i class="brand" aria-hidden="true" data-l="EAW" style="--i:2;--w:128"></i><i class="brand" aria-hidden="true" data-l="Kling&amp;Freitag" style="--i:3;--w:128"></i><i class="brand" aria-hidden="true" data-l="Symetrix" style="--i:4;--w:128"></i><i class="brand" aria-hidden="true" data-l="Powersoft" style="--i:5;--w:114"></i><i class="brand" aria-hidden="true" data-l="SHURE" style="--i:6;--w:128"></i><i class="brand" aria-hidden="true" data-l="televic" style="--i:7;--w:128"></i><i class="brand" aria-hidden="true" data-l="SENNHEISER" style="--i:8;--w:128"></i><i class="brand" aria-hidden="true" data-l="TANNOY" style="--i:9;--w:128"></i><i class="brand" aria-hidden="true" data-l="LAB.GRUPPEN" style="--i:10;--w:128"></i><i class="brand" aria-hidden="true" data-l="MIDAS" style="--i:11;--w:128"></i><i class="brand" aria-hidden="true" data-l="Electro-Voice" style="--i:12;--w:128"></i><i class="brand" aria-hidden="true" data-l="Martin Audio" style="--i:13;--w:30"></i><i class="brand" aria-hidden="true" data-l="TW AUDiO" style="--i:14;--w:128"></i><i class="brand" aria-hidden="true" data-l="珠江灯光" style="--i:15;--w:119"></i><i class="brand" aria-hidden="true" data-l="JOLLY 鸿彩灯光" style="--i:16;--w:72"></i><i class="brand" aria-hidden="true" data-l="FINE ART" style="--i:17;--w:128"></i><i class="brand" aria-hidden="true" data-l="AVOLITES" style="--i:18;--w:58"></i><i class="brand" aria-hidden="true" data-l="BOSCH" style="--i:19;--w:128"></i><i class="brand" aria-hidden="true" data-l="Turbosound" style="--i:20;--w:128"></i>
   </div>
 </div>
 
