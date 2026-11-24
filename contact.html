@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>联系我们 | 众擎演艺科技</title>
+<link rel="icon" href="images/logo.png">
 <meta name="description" content="江西众擎演艺科技发展有限责任公司：剧场、文化中心、体育场馆、会议室的音响、灯光、视频与舞台机械系统集成。">
 <style>
 /* ================================================================
@@ -78,8 +79,8 @@ h2.title{font-size:clamp(32px,4.6vw,64px);font-weight:500;line-height:1.15;lette
 .nav.scrolled{background:rgba(14,14,14,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.06em}
-.logo-mark{width:34px;height:34px;border:1px solid var(--gold);display:grid;place-items:center}
-.logo-mark svg{width:18px;height:18px}
+.logo-mark{width:34px;height:34px;display:block;flex:none}
+.logo-mark img{width:100%;height:100%;display:block}
 .logo small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:var(--text-dim);font-weight:400}
 .nav-links{display:flex;gap:40px;font-size:16px;margin-left:auto;margin-right:36px}
 .nav-links a{position:relative;color:var(--text-dim);transition:color .2s}
@@ -331,9 +332,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);
 <header class="nav" id="nav">
   <div class="wrap">
     <a href="index.html" class="logo" aria-label="众擎演艺科技 首页">
-      <span class="logo-mark"><!-- 替换：公司 logo，可换成 <img src="images/logo.svg"> -->
-        <svg viewBox="0 0 24 24" fill="none" stroke="#f4553b" stroke-width="1.6"><path d="M5 4h14L7 20h12"/></svg>
-      </span>
+      <span class="logo-mark"><img src="images/logo.png" alt=""></span>
       <span>众擎演艺<small>ZHONGQING · PERFORMING ARTS TECH</small></span>
     </a>
     <nav class="nav-links" aria-label="主导航">
@@ -396,7 +395,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);
   <div class="wrap">
     <div class="foot-top">
       <div class="about">
-        <div class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#f4553b" stroke-width="1.6"><path d="M5 4h14L7 20h12"/></svg></span>
+        <div class="logo"><span class="logo-mark"><img src="images/logo.png" alt=""></span>
           <span>江西众擎演艺科技发展有限责任公司</span></div>
         <p>集科技化、数字化、信息化于一身的专业系统集成公司。诚信 · 创新 · 超越 · 共赢。</p>
       </div>
